@@ -1,0 +1,6 @@
+add_filter( 'woocommerce_demo_store', 'modify_woocommerce_demo_store', 99 );
+function modify_woocommerce_demo_store( $notice_html) {   
+ if( is_shop() || is_product() || is_product_category()) {
+  return $notice_html;
+ } 
+}
